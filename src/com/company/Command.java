@@ -8,12 +8,12 @@ public class Command
     public static Scanner sc = new Scanner(System.in);
     public static void getUserChoice()
     {
+        String tabCommand[] = {"Help","Exit","Create","Delete" };
         do {
             String choice = sc.nextLine();
-            String tabCommand[] = {choice};
             if(choice.equals("Help"))
             {
-                System.out.println();
+                System.out.println(tabCommand);
 
             }
             if(choice.equals("Exit"))
