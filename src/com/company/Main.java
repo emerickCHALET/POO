@@ -1,9 +1,14 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Main {
 
+    /**
+     * args significate arguments, This table is the mechanism for the system to pass the information to your application
+     * @param args
+     */
     public static void main(String[] args) {
-	// write your code here
-        System.out.println("ndjfjkzpiogjz ");
+        System.out.println("Application has started");
     }
 }
