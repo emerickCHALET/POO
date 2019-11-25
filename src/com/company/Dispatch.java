@@ -3,10 +3,10 @@ package com.company;
 public class Dispatch
 {
     /**
-     * dispatchCMD va appeller les méthodes correspondants aux lignes de commandes saisi par l'utilisateur
-     * @param userCMD la commande de l'utilisateur
-     * @param listCMD les commandes disponible pour jouer, quitter etc etc ...
-     * @return retourne la commande
+     * dispatchCMD call the methods corresponding with the right user controls
+     * @param userCMD User controls
+     * @param listCMD available controls
+     * @return return control
      */
     public static String dispatchCMD(String userCMD,String[] listCMD)
     {
@@ -16,7 +16,11 @@ public class Dispatch
             for(int i = 0; i < listCMD.length; i++)
             System.out.println(listCMD[i]);
         }
-        //la méthode a t'elle vraiment besoin de return ?
+        else if(userCMD.equals("Create"))
+        {
+            System.out.println("Debug Create");
+        }
+        //need return ?
         return userCMD;
     }
 }

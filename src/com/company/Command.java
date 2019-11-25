@@ -7,11 +7,11 @@ import java.util.Scanner;
 public class Command
 {
     /**
-     * Création du tableau de commande disponible pour jouer
-     * getUserChoice() capte la saisie de l'utilisateur
-     * et regarde si l'utilisateur à rentré une commande valide
-     * sinon elle octroie la commande de Help par defaut
-     * @return retourne la ligne de commande valide
+     * Create control tab available for play
+     * getUserChoice() get the Input user
+     * look if the controls is available
+     * else if assigns the default control
+     * @return return the control
      */
     public static String tabCommand[] = {"Help","Exit","Create","Delete" };
     public static  String getUserChoice()
@@ -36,7 +36,7 @@ public class Command
 
     /**
      * reference()
-     * @return retourne la tableau contenant les lignes de commande valide
+     * @return Return the table containing the control
      */
     public static String[] reference()
     {

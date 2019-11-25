@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 
     /**
-     * Création du main avec la méthode principale qui execute le jeu de rôle
+     * Create main with the main method executing the game
      * @param args
      */
     public static void main(String[] args)
@@ -14,9 +14,8 @@ public class Main {
     }
 
     /**
-     * execution() est une méthode
-     * qui sert à executer le jeu
-     * elle remplace le main pour ne pas "charger" le main avec autre chose que des appels de méthodes
+     * execution() is a method executing the game
+     * she replaces the main method
      */
     public static void execution()
     {
