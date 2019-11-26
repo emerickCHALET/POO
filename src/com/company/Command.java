@@ -1,31 +1,45 @@
 package com.company;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.Scanner;
 
 public class Command
 {
-    public static Scanner sc = new Scanner(System.in);
-    public static void getUserChoice()
+    /**
+     * Create control tab available for play
+     * getUserChoice() get the Input user
+     * look if the controls is available
+     * else if assigns the default control
+     * @return return the control
+     */
+    public static String tabCommand[] = {"Help","Exit","Create","Delete" };
+    public static  String getUserChoice()
     {
-        String tabCommand[] = {"Help","Exit","Create","Delete" };
-        do {
-            String choice = sc.nextLine();
-            if(choice.equals("Help"))
+        Scanner sc = new Scanner(System.in);
+        String choice;
+        Boolean BOOOOOL = false;
+        choice = sc.nextLine();
+        for(int i = 0; i < tabCommand.length; i++)
+        {
+            if(choice.equals(tabCommand[i]))
             {
-                System.out.println(tabCommand);
+                BOOOOOL = true;
+            }
+        }
+        if(BOOOOOL == false)
+        {
+            choice = "Help";
+        }
+        return choice;
+    }
 
-            }
-            if(choice.equals("Exit"))
-            {
-                System.out.println("Bye bye");
-                System.exit(0);
-            }
-            else
-            {
-                System.out.println("Error");
-                System.out.println(tabCommand);
-            }
-        }while(true);
+    /**
+     * reference()
+     * @return Return the table containing the control
+     */
+    public static String[] reference()
+    {
+        return tabCommand;
     }
 }
