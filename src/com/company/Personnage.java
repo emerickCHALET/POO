@@ -23,6 +23,9 @@ public class Personnage
         initiative = 10;
     }
 
+    public Personnage() {
+    }
+
     /** Return of the name of the character*/
     public String getName()
     {
@@ -48,13 +51,34 @@ public class Personnage
     {
         return this.hp -= damage;
     }
+<<<<<<< HEAD
     /** display of character information*/
     public void display()
+=======
+
+    /**
+     * return of element of character
+     * @return element of the character
+     */
+    public String toString()
+>>>>>>> Story3
     {
+        String res = "name = " + this.name + "\n";
+        res += "damage = " + this.damage + "\n";
+        res += "hp = " + this.hp + "\n";
+        res += "initiative = " + this.initiative + "\n";
+        return res;
+    }
+
+    /** display of character information*/
+    public void display() {
         System.out.println(this.name);
         System.out.println(this.damage);
         System.out.println(this.hp);
         System.out.println(this.initiative);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> Story3
 }
