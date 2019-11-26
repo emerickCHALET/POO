@@ -21,10 +21,9 @@ public class Main {
     {
         System.out.println("Application has started");
         String ch;
-        String[] CMD = Command.reference();
         do {
             ch = Command.getUserChoice();
-            Dispatch.dispatchCMD(ch,CMD);
+            Dispatch.dispatchCMD(ch);
         }while(!ch.equals("Exit"));
     }
 

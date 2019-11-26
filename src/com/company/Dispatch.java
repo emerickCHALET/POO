@@ -1,26 +1,32 @@
 package com.company;
 
+import java.util.SplittableRandom;
+
 public class Dispatch
 {
     /**
-     * dispatchCMD call the methods corresponding with the right user controls
-     * @param userCMD User controls
-     * @param listCMD available controls
-     * @return return control
+     * dispatchCMD call the methods corresponding with the right user command
+     * @param userCMD User command
      */
-    public static String dispatchCMD(String userCMD,String[] listCMD)
+    public static void dispatchCMD(String userCMD)
     {
         if(userCMD.equals("Help"))
         {
-            System.out.println("Debug Help");
-            for(int i = 0; i < listCMD.length; i++)
-            System.out.println(listCMD[i]);
+            helpMethod();
         }
         else if(userCMD.equals("Create"))
         {
             System.out.println("Debug Create");
         }
-        //need return ?
-        return userCMD;
+    }
+
+    /**
+     * helpMethod is method for print the available line command
+     */
+    public static void helpMethod()
+    {
+        String[] listCMD = Command.tabCommand;
+        for(int i = 0; i < listCMD.length; i++)
+            System.out.println(listCMD[i]);
     }
 }
