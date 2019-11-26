@@ -7,13 +7,13 @@ import java.util.Scanner;
 public class Command
 {
     /**
-     * Create control tab available for play
+     * Create the tab with available line command for play
      * getUserChoice() get the Input user
-     * look if the controls is available
-     * else if assigns the default control
-     * @return return the control
+     * look if the command is available
+     * else if assigns the default line command
+     * @return return the line command
      */
-    public static String tabCommand[] = {"Help","Exit","Create","Delete" };
+    public final static String tabCommand[] = {"Help","Exit","Create","Delete" };
     public static  String getUserChoice()
     {
         Scanner sc = new Scanner(System.in);
@@ -32,14 +32,5 @@ public class Command
             choice = "Help";
         }
         return choice;
-    }
-
-    /**
-     * reference()
-     * @return Return the table containing the control
-     */
-    public static String[] reference()
-    {
-        return tabCommand;
     }
 }
