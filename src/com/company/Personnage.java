@@ -23,32 +23,31 @@ public class Personnage
         initiative = 10;
     }
 
-
+    /** Return of the name of the character*/
     public String getName()
     {
         return (this.name);
     }
-    /** Return of the name of the character*/
+    /** Return of the points of life of the character*/
     public int getHp()
     {
         return (this.hp);
     }
-    /** Return of the points of life of the character*/
+    /** Return of the points that the character undergoes */
     public int getDamage()
     {
         return this.damage;
     }
-    /** Return of the points that the character undergoes */
+    /** Return of the points of initiative of the character*/
     public int getInitiative()
     {
         return this.initiative;
     }
-    /** Return of the points of initiative of the character*/
+    /** Return the remaining life points of the character*/
     public int hurt(int damage)
     {
         return this.hp -= damage;
     }
-    /** Return the remaining life points of the character*/
     public void display()
     {
         System.out.println(this.name);

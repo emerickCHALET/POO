@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main
@@ -20,12 +22,12 @@ public class Main
      */
     public static void execution()
     {
-        
+        List<Personnage> listPersonnage = new ArrayList();
         System.out.println("Application has started");
         String ch;
         do {
             ch = Command.getUserChoice();
-            Dispatch.dispatchCMD(ch);
+            Dispatch.dispatchCMD(ch,listPersonnage);
         }while(!ch.equals("Exit"));
     }
 
