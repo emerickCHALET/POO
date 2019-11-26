@@ -51,6 +51,20 @@ public class Personnage
     {
         return this.hp -= damage;
     }
+
+    /**
+     * return of element of character
+     * @return element of the character
+     */
+    public String toString()
+    {
+        String res = "name = " + this.name + "\n";
+        res += "damage = " + this.damage + "\n";
+        res += "hp = " + this.hp + "\n";
+        res += "initiative = " + this.initiative + "\n";
+        return res;
+    }
+
     /** display of character information*/
     public void display() {
         System.out.println(this.name);
