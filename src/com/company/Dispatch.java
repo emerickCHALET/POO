@@ -1,6 +1,13 @@
 package com.company;
 
+import org.w3c.dom.ls.LSOutput;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.SplittableRandom;
+import java.util.ListIterator;
+
+
 
 public class Dispatch
 {
@@ -16,7 +23,7 @@ public class Dispatch
         }
         else if(userCMD.equals("Create"))
         {
-            System.out.println("Debug Create");
+            CreatePersonnage.createPersonnage();
         }
     }
 

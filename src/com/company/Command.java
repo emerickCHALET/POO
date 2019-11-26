@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Scanner;
 
+
 public class Command
 {
     /**
@@ -33,4 +34,5 @@ public class Command
         }
         return choice;
     }
+
 }

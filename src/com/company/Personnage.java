@@ -6,14 +6,23 @@ package com.company;
 
 public class Personnage
 {
-    private String name;
     /** Creation of the name of character*/
-    private int damage;
+    private String name;
     /** Creation of the damage points*/
-    private int hp;
+    private int damage;
     /** Creation of the life of character*/
-    private int initiative;
+    private int hp;
     /** Creation of the points of initiative*/
+    private int initiative;
+
+    public Personnage(String nameUser)
+    {
+        name = nameUser;
+        damage = 2;
+        hp = 3;
+        initiative = 10;
+    }
+
 
     public String getName()
     {
