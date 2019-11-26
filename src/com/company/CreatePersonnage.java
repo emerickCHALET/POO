@@ -15,8 +15,14 @@ public class CreatePersonnage
 
         System.out.println("Enter name of personnage :");
         String nameCaractere = sc.nextLine();
-
         Personnage caractere = new Personnage(nameCaractere);
+
+        System.out.println("Enter class :");
+        String classCharacter = sc.nextLine();
+        if (classCharacter.equals("warrior") == true)
+        {
+            caractere = new Warrior();
+        }
         return caractere;
     }
 }

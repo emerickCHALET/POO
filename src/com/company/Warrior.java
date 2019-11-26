@@ -37,5 +37,6 @@ public class Warrior extends Personnage
     {
         String res = super.toString();
         res += "shield = " + this.shield + "\n";
+        return res;
     }
 }
