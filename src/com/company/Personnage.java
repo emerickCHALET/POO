@@ -48,6 +48,7 @@ public class Personnage
     {
         return this.hp -= damage;
     }
+    /** display of character information*/
     public void display()
     {
         System.out.println(this.name);
@@ -55,5 +56,5 @@ public class Personnage
         System.out.println(this.hp);
         System.out.println(this.initiative);
     }
-    /** display of character information*/
+
 }

@@ -34,6 +34,7 @@ public class Dispatch
     /**
      * helpMethod is method for print the available line command
      */
+
     public static void helpMethod()
     {
         String[] listCMD = Command.tabCommand;
@@ -41,6 +42,10 @@ public class Dispatch
             System.out.println(listCMD[i]);
     }
 
+    /**
+     * numberOfCara is for Create the personnages
+     * @param listCara is for group the personnages
+     */
     public static void numberOfCara(List listCara)
     {
         for(int i = 0; i < listCara.size(); i++)
@@ -50,6 +55,10 @@ public class Dispatch
         }
     }
 
+    /**
+     * caractereList is the List of all personnages create with attributs
+     * @param listCara is for group the personnages
+     */
     public static void caractereList(List listCara)
     {
         Scanner sc = new Scanner(System.in);
