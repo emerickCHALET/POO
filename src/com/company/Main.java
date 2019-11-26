@@ -2,8 +2,9 @@ package com.company;
 
 import java.util.Scanner;
 
-public class Main {
-
+public class Main
+{
+    public static Command gameCommand = new Command();
     /**
      * Create main with the main method executing the game
      * @param args
@@ -19,6 +20,7 @@ public class Main {
      */
     public static void execution()
     {
+        
         System.out.println("Application has started");
         String ch;
         do {
@@ -26,5 +28,8 @@ public class Main {
             Dispatch.dispatchCMD(ch);
         }while(!ch.equals("Exit"));
     }
+
+
+
 
 }
