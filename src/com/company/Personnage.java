@@ -23,6 +23,9 @@ public class Personnage
         initiative = 10;
     }
 
+    public Personnage() {
+    }
+
     /** Return of the name of the character*/
     public String getName()
     {
@@ -48,12 +51,11 @@ public class Personnage
     {
         return this.hp -= damage;
     }
-    public void display()
-    {
+    /** display of character information*/
+    public void display() {
         System.out.println(this.name);
         System.out.println(this.damage);
         System.out.println(this.hp);
         System.out.println(this.initiative);
     }
-    /** display of character information*/
 }
