@@ -2,7 +2,9 @@ package com.company;
 
 import javax.swing.*;
 import java.awt.*;
+import java.sql.SQLOutput;
 import java.util.Scanner;
+
 
 public class Command
 {
@@ -13,9 +15,10 @@ public class Command
      * else if assigns the default line command
      * @return return the line command
      */
-    public final static String tabCommand[] = {"Help","Exit","Create","Delete" };
+    public final static String tabCommand[] = {"Help","Exit","Create","Delete","Info_Cara","Number_Of_Cara"};
     public static  String getUserChoice()
     {
+        System.out.println("Make a command");
         Scanner sc = new Scanner(System.in);
         String choice;
         Boolean BOOOOOL = false;
