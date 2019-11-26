@@ -23,11 +23,12 @@ public class Main
     public static void execution()
     {
         List<Personnage> listPersonnage = new ArrayList();
+        List<Personnage> listFighter = new ArrayList();
         System.out.println("Application has started");
         String ch;
         do {
             ch = Command.getUserChoice();
-            Dispatch.dispatchCMD(ch,listPersonnage);
+            Dispatch.dispatchCMD(ch,listPersonnage,listFighter);
         }while(!ch.equals("Exit"));
     }
 
