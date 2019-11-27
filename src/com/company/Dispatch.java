@@ -44,6 +44,11 @@ public class Dispatch
             Personnage cara = CreatePersonnage.createWizard();
             listCara.add(cara);
         }
+        else if (userCMD.equals("CreateBasicArchetype"))
+        {
+            Personnage cara = CreatePersonnage.createBasicPersonnage();
+            listCara.add(cara);
+        }
     }
     /**
      * helpMethod is method for print the available line command

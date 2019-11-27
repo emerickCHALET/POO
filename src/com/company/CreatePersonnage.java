@@ -33,6 +33,12 @@ public class CreatePersonnage
         return caractere;
     }
 
+    public static Personnage createBasicPersonnage()
+    {
+        Personnage caractere = new BasicArchetype();
+        return caractere;
+    }
+
     /**
      * Create a charactere with all informations
      * @return a new caractere
