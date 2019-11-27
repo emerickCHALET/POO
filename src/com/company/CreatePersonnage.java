@@ -8,13 +8,11 @@ import java.util.Scanner;
 
 public class CreatePersonnage
 {
-    public Scanner sc = new Scanner(System.in);
-
     /**
      * create a warrior charactere
      * @return a new Personnage Warrior
      */
-    public  Personnage createWarrior()
+    public static Personnage createWarrior()
     {
         Personnage caractere = new Personnage();
         System.out.println("Enter a number of the shield");
@@ -28,8 +26,9 @@ public class CreatePersonnage
      * Create a charactere with all informations
      * @return a new caractere
      */
-    public Personnage createPersonnage()
+    public static Personnage createPersonnage()
     {
+        Scanner sc = new Scanner(System.in);
         System.out.println("Enter name of personnage :");
         String nameCaractere = sc.nextLine();
         System.out.println("Enter hp :");
