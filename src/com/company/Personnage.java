@@ -26,6 +26,7 @@ public class Personnage
     public Personnage() {
     }
 
+    
     /** Return of the name of the character*/
     public String getName()
     {
