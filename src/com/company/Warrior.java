@@ -6,11 +6,8 @@ public class Warrior extends Personnage
 {
     private int shield;
 
-    public Warrior()
+    public Warrior(int shield)
     {
-        System.out.println("Enter a number of the shield");
-        Scanner sc = new Scanner(System.in);
-        int shield = sc.nextInt();
         this.shield = shield;
     }
 
@@ -27,6 +24,17 @@ public class Warrior extends Personnage
         else
             damage = 0;
         return damage;
+    }
+    /**
+     * Return the remaining life points of the character after intervention of the shield
+     * @param damage damage before the intervention of the shield
+     * return damage after the intervention of shield
+     */
+    public int hurt(int damage)
+    {
+        int res = getReduceDommage(damage);
+        res = super.hurt(res);
+        return res;
     }
 
     /**

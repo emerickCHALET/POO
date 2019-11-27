@@ -8,21 +8,24 @@ import java.util.Scanner;
 
 public class CreatePersonnage
 {
+    public Scanner sc = new Scanner(System.in);
 
-    public static Personnage createPersonnage()
+    public  Personnage createWarrior()
     {
+        Personnage caractere = new Personnage();
+        System.out.println("Enter a number of the shield");
         Scanner sc = new Scanner(System.in);
+        int shield = sc.nextInt();
+        caractere = new Warrior(shield);
+        }
+        return caractere
+    }
 
+    public Personnage createPersonnage()
+    {
         System.out.println("Enter name of personnage :");
         String nameCaractere = sc.nextLine();
         Personnage caractere = new Personnage(nameCaractere);
-
-        System.out.println("Enter class :");
-        String classCharacter = sc.nextLine();
-        if (classCharacter.equals("warrior") == true)
-        {
-            caractere = new Warrior();
-        }
         return caractere;
     }
 }
