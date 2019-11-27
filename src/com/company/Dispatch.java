@@ -39,6 +39,11 @@ public class Dispatch
             Personnage cara = CreatePersonnage.createWarrior();
             listCara.add(cara);
         }
+        else if (userCMD.equals("CreateWizard"))
+        {
+            Personnage cara = CreatePersonnage.createWizard();
+            listCara.add(cara);
+        }
     }
     /**
      * helpMethod is method for print the available line command
@@ -68,7 +73,7 @@ public class Dispatch
      * caractereList is the List of all personnages create with attributs
      * @param listCara is for group the personnages
      */
-    public static void caractereList(List listCara)
+    public static void caractereList(List <Personnage> listCara)
     {
         Scanner sc = new Scanner(System.in);
         System.out.println("Choix du personnage : ");

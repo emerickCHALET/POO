@@ -15,7 +15,7 @@ public class Warrior extends Personnage
      * function that returns the damage after the intervention of the shield
      * @param damage damage before the intervention of the shield
      */
-    public int getReduceDommage(int damage)
+    private int getReduceDommage(int damage)
     {
         if (damage > this.shield)
         {
