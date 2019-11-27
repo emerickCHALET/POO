@@ -43,10 +43,10 @@ public class Dispatch
             Personnage cara = CreatePersonnage.createWarrior();
             listCara.add(cara);
         }
-        else if (userCMD.equals("CreateWizard"))
-        {
+        else if (userCMD.equals("CreateWizard")) {
             Personnage cara = CreatePersonnage.createWizard();
             listCara.add(cara);
+        }
         else if(userCMD.equals("Delete"))
         {
             deleteThis(listCara);
