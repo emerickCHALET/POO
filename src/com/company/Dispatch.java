@@ -44,6 +44,12 @@ public class Dispatch
             Personnage cara = CreatePersonnage.createWizard();
             listCara.add(cara);
         }
+
+        else if (userCMD.equals("CreateBasicArchetype"))
+        {
+            Personnage cara = CreatePersonnage.createBasicPersonnage();
+        }
+
         else if (userCMD.equals("CreateThief"))
         {
             Personnage cara = CreatePersonnage.createThief();
