@@ -50,7 +50,7 @@ public class Dispatch
      * numberOfCara is for Create the personnages
      * @param listCara is for group the personnages
      */
-    public static void numberOfCara(List listCara)
+    public static void numberOfCara(List<Personnage> listCara)
     {
         for(int i = 0; i < listCara.size(); i++)
         {
@@ -63,7 +63,7 @@ public class Dispatch
      * caractereList is the List of all personnages create with attributs
      * @param listCara is for group the personnages
      */
-    public static void caractereList(List listCara)
+    public static void caractereList(List<Personnage> listCara)
     {
         Scanner sc = new Scanner(System.in);
         System.out.println("Choix du personnage : ");
@@ -74,7 +74,7 @@ public class Dispatch
         System.out.println("Damage : " + seePersonnage.getDamage());
         System.out.println("Initiative : " + seePersonnage.getInitiative());
     }
-    public static void fightingFighter(List listCara,List listFighter)
+    public static void fightingFighter(List<Personnage> listCara,List<Personnage> listFighter)
     {
         Scanner sc = new Scanner(System.in);
         System.out.println("Choose the fighter 1");
