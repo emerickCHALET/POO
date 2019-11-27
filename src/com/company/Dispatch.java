@@ -34,6 +34,11 @@ public class Dispatch
         {
             fightingFighter(listCara,listFighter);
         }
+        else if (userCMD.equals("CreateWarrior"))
+        {
+            Personnage cara = CreatePersonnage.createWarrior();
+            listCara.add(cara);
+        }
     }
     /**
      * helpMethod is method for print the available line command
