@@ -17,8 +17,7 @@ public class CreatePersonnage
         Scanner sc = new Scanner(System.in);
         int shield = sc.nextInt();
         caractere = new Warrior(shield);
-        }
-        return caractere
+        return caractere;
     }
 
     public Personnage createPersonnage()
