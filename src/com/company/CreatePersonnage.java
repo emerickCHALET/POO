@@ -37,6 +37,7 @@ public class CreatePersonnage
     public static Personnage createBasicPersonnage()
     {
         Personnage caractere = new BasicArchetype();
+        return  caractere;
     }
 
     public static Personnage createThief()
