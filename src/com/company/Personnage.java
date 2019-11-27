@@ -15,12 +15,12 @@ public class Personnage
     /** Creation of the points of initiative*/
     private int initiative;
 
-    public Personnage(String nameUser)
+    public Personnage(String nameUser, int hp, int damage, int initiative)
     {
-        name = nameUser;
-        damage = 2;
-        hp = 3;
-        initiative = 10;
+        this.name = nameUser;
+        this.damage = damage;
+        this.hp = hp;
+        this.initiative = initiative;
     }
 
     public Personnage() {
@@ -72,5 +72,9 @@ public class Personnage
         System.out.println(this.damage);
         System.out.println(this.hp);
         System.out.println(this.initiative);
+    }
+
+    public void startFight()
+    {
     }
 }

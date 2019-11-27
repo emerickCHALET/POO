@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class Command
 {
+    private static boolean firstCommand = true;
     /**
      * Create the tab with available line command for play
      * getUserChoice() get the Input user
@@ -15,9 +16,15 @@ public class Command
      * else if assigns the default line command
      * @return return the line command
      */
-    public final static String tabCommand[] = {"Help","Exit","Create","Delete","Info_Cara","Number_Of_Cara","Fight"};
+    public final static String tabCommand[] = {"Help","Exit","Create","Delete","Info_Cara",
+            "Number_Of_Cara","Fight", "CreateWarrior"};
     public static  String getUserChoice()
     {
+        if(firstCommand == true)
+        {
+            Dispatch.helpMethod();
+            firstCommand = false;
+        }
         System.out.println("Make a command");
         Scanner sc = new Scanner(System.in);
         String choice;
