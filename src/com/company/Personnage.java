@@ -72,4 +72,8 @@ public class Personnage
         System.out.println(this.hp);
         System.out.println(this.initiative);
     }
+
+    public void startFight()
+    {
+    }
 }

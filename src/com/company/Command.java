@@ -15,7 +15,7 @@ public class Command
      * else if assigns the default line command
      * @return return the line command
      */
-    public final static String tabCommand[] = {"Help","Exit","Create","Delete","Info_Cara","Number_Of_Cara","Fight", "CreateWarrior","CreateWizard"};
+    public final static String tabCommand[] = {"Help","Exit","Create","Delete","Info_Cara","Number_Of_Cara","Fight", "CreateWarrior","CreateWizard", "CreateThief"};
     public static  String getUserChoice()
     {
         System.out.println("Make a command");

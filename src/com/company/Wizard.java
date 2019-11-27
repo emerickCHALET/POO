@@ -5,30 +5,24 @@ import java.util.Scanner;
 public class Wizard extends Personnage
 {
     private int magicalDamage;
+    private int ref;
 
-    public Wizard(int magicalDamage){ this.magicalDamage = magicalDamage;}
+    public Wizard(int magicalDamage)
+    {
+        this.magicalDamage = magicalDamage;
+        this.ref = this.magicalDamage;
+    }
 
     /**
      * new domage with magical domage
      * @return new domage with magical domage
      */
-    private int getMagicalDamage()
+    public int getDamage()
     {
-        int TotalMagicalDommage =super.getDamage() + this.magicalDamage;
+        int totalMagicalDommage =super.getDamage() + this.magicalDamage;
         if (this.magicalDamage >= 2)
             this.magicalDamage /= 2;
-        return this.magicalDamage;
-    }
-
-    /**
-     * function that returns the damage after the intervention of the magical power
-     * @param damage damage before the intervention of the magical power
-     */
-    public int hurt()
-    {
-        int res = getMagicalDamage();
-        res = super.hurt(res);
-        return res;
+        return totalMagicalDommage;
     }
 
     /**
@@ -40,6 +34,11 @@ public class Wizard extends Personnage
         String res = super.toString();
         res += "magical damage" + this.magicalDamage +"\n";
         return res;
+    }
+
+    public void startFight()
+    {
+        this.magicalDamage = this.ref;
     }
 }
 
