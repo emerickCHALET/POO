@@ -10,6 +10,10 @@ public class CreatePersonnage
 {
     public Scanner sc = new Scanner(System.in);
 
+    /**
+     * create a warrior charactere
+     * @return a new Personnage Warrior
+     */
     public  Personnage createWarrior()
     {
         Personnage caractere = new Personnage();
@@ -20,11 +24,21 @@ public class CreatePersonnage
         return caractere;
     }
 
+    /**
+     * Create a charactere with all informations
+     * @return a new caractere
+     */
     public Personnage createPersonnage()
     {
         System.out.println("Enter name of personnage :");
         String nameCaractere = sc.nextLine();
-        Personnage caractere = new Personnage(nameCaractere);
+        System.out.println("Enter hp :");
+        int hp = sc.nextInt();
+        System.out.println("Enter damage :");
+        int damage = sc.nextInt();
+        System.out.println("Enter initiative :");
+        int initiative = sc.nextInt();
+        Personnage caractere = new Personnage(nameCaractere, hp, damage, initiative);
         return caractere;
     }
 }
