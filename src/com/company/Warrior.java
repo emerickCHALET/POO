@@ -6,8 +6,9 @@ public class Warrior extends Personnage
 {
     private int shield;
 
-    public Warrior(int shield)
+    public Warrior(Personnage pBasic , int shield )
     {
+        super(pBasic.getName(),pBasic.getHp(),pBasic.getDamage(),pBasic.getInitiative());
         this.shield = shield;
     }
 

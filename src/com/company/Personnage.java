@@ -22,10 +22,6 @@ public class Personnage
         this.hp = hp;
         this.initiative = initiative;
     }
-
-    public Personnage() {
-    }
-
     /** Return of the name of the character*/
     public String getName()
     {
@@ -73,7 +69,8 @@ public class Personnage
         System.out.println(this.initiative);
     }
 
-    public void startFight()
+    public static void startFight()
     {
+
     }
 }
