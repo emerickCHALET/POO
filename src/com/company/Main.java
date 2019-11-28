@@ -30,10 +30,5 @@ public class Main
             ch = Command.getUserChoice();
             Dispatch.dispatchCMD(ch,listPersonnage,listFighter);
         }while(!ch.equals("Exit"));
-
     }
-
-
-
-
 }

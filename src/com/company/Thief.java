@@ -7,6 +7,7 @@ public class Thief extends Personnage
     private int dodge;
     private int criticalDamage;
     private static String classA = "Thief";
+    private int DGTS = super.getDamage();
 
     /**
      * constructor of thief class
@@ -37,11 +38,16 @@ public class Thief extends Personnage
      */
     public int hurt(int damage)
     {
+        System.out.println("se prends damage avant lancé de dé"+ damage);
         int res;
-
         res = numberRandom();
         if (res <= this.dodge)
+        {
+
             damage = 0;
+            System.out.println(damage + " reset ?");
+        }
+        System.out.println("n'est pas passé ou pas et renvoie" + damage);
         return damage;
     }
 
@@ -67,9 +73,9 @@ public class Thief extends Personnage
         if (res <= criticalDamage)
         {
             System.out.println("Debug Critique");
-            return (getDamage()* 2);
+            return (DGTS * 2);
         }
-        return(getDamage());
+        return DGTS;
     }
 
     /**
