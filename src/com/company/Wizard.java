@@ -6,6 +6,7 @@ public class Wizard extends Personnage
 {
     private static int magicalDamage;
     private static int ref;
+    private static String classA = "Wizard";
     static boolean first = true;
 
     public Wizard(Personnage pBasic,int magicalDamage)
@@ -30,6 +31,11 @@ public class Wizard extends Personnage
         return totalMagicalDommage;
     }
 
+    public String getClassA()
+    {
+        return this.classA;
+    }
+
     /**
      * return of element of character more magical power
      * @return element of the character more magical power
@@ -38,7 +44,7 @@ public class Wizard extends Personnage
     {
         String classe = "Wizard";
         String res = super.toString();
-        res += "magical damage = " + this.magicalDamage +"\n" +classe + "\n";
+        res += "magical damage = " + this.magicalDamage +"\n" + classA + "\n";
         return res;
     }
 

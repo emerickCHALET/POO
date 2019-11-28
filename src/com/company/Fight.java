@@ -41,10 +41,12 @@ public class Fight
         if(p1Attack.getHp() <= 0)
         {
             System.out.println(p1Attack.getName() + " Is death !");
+            System.out.println("Class is = " + p1Attack.getClassA());
         }
         else
         {
             System.out.println(p2Deff.getName() + " Is Death !");
+            System.out.println("Class is = " + p2Deff.getClassA());
         }
     }
 }

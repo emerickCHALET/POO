@@ -48,6 +48,11 @@ public class Personnage
         return this.hp -= damage;
     }
 
+    public String getClassA()
+    {
+        return null;
+    }
+
     /**
      * return of element of character
      * @return element of the character

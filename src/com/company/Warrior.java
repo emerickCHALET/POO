@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Warrior extends Personnage
 {
     private int shield;
+    private static String classA = "Warrior";
 
     public Warrior(Personnage pBasic , int shield )
     {
@@ -26,6 +27,11 @@ public class Warrior extends Personnage
             damage = 0;
         return damage;
     }
+
+    public String getClassA()
+    {
+        return this.classA;
+    }
     /**
      * Return the remaining life points of the character after intervention of the shield
      * @param damage damage before the intervention of the shield
@@ -44,7 +50,6 @@ public class Warrior extends Personnage
      */
     public String toString()
     {
-        String classe = "Warrior";
-        return (super.toString() + "shield = " + this.shield + "\n"+classe + "\n");
+        return (super.toString() + "shield = " + this.shield + "\n"+ classA + "\n");
     }
 }
