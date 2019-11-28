@@ -44,8 +44,7 @@ public class Warrior extends Personnage
      */
     public String toString()
     {
-        String res = super.toString();
-        res += "shield = " + this.shield + "\n";
-        return res;
+        String classe = "Warrior";
+        return (super.toString() + "shield = " + this.shield + "\n"+classe + "\n");
     }
 }
