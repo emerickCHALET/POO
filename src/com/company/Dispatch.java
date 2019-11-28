@@ -115,7 +115,8 @@ public class Dispatch
         String sur = areYouSure();
         if(sur.equals("Yes"))
         {
-            System.out.println("AHHHHHHHH");
+            System.out.println(listCara. + " Is death !");
+            System.out.println("Class is = " + listCara);
             listCara.remove(index);
         }
         else
