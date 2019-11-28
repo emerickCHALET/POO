@@ -40,13 +40,17 @@ public class CreatePersonnage
         return  caractere;
     }*/
 
-    /*public static Personnage createThief()
+    public static Personnage createThief()
     {
-        Personnage caractere = new Personnage();
-        caractere = new Thief();
-
-        return caractere;
-    }*/
+        Personnage aliBabba = createPersonnage();
+        System.out.println("Enter a number of dodge");
+        Scanner sc = new Scanner(System.in);
+        int dodge = sc.nextInt();
+        System.out.println("Enter a number of criticalDamage");
+        int criticalDamage = sc.nextInt();
+        Thief thief = new Thief(aliBabba, dodge, criticalDamage);
+        return thief;
+    }
 
     /**
      * Create a charactere with all informations
