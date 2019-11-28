@@ -1,4 +1,4 @@
-package com.company;
+/*package com.company;
 
 public class BasicArchetype extends Personnage
 {
@@ -6,4 +6,4 @@ public class BasicArchetype extends Personnage
     {
 
     }
-}
+}*/
