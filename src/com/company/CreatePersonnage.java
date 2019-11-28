@@ -23,6 +23,10 @@ public class CreatePersonnage
         return war;
     }
 
+    /**
+     * create a wizard charactere
+     * @return a new Personnage Wizard
+     */
     public static Personnage createWizard()
     {
         Personnage camomille = createPersonnage();
@@ -40,6 +44,10 @@ public class CreatePersonnage
         return  caractere;
     }*/
 
+    /**
+     * create a thief charactere
+     * @return a new Personnage thief
+     */
     public static Personnage createThief()
     {
         Personnage aliBabba = createPersonnage();

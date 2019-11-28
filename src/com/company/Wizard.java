@@ -9,6 +9,11 @@ public class Wizard extends Personnage
     private static String classA = "Wizard";
     static boolean first = true;
 
+    /**
+     * Constructor of Wizard
+     * @param pBasic all information of personnage
+     * @param magicalDamage add to basic damage
+     */
     public Wizard(Personnage pBasic,int magicalDamage)
     {
         super(pBasic.getName(),pBasic.getHp(),pBasic.getDamage(),pBasic.getInitiative());
@@ -31,6 +36,10 @@ public class Wizard extends Personnage
         return totalMagicalDommage;
     }
 
+    /**
+     * Method for return class
+     * @return class
+     */
     public String getClassA()
     {
         return this.classA;
@@ -48,6 +57,9 @@ public class Wizard extends Personnage
         return res;
     }
 
+    /**
+     * Method start fight for reset the magical damage
+     */
     public static void startFight()
     {
         first = true;
