@@ -23,11 +23,11 @@ public class Dispatch
         {
             archeTopic(listCara);
         }
-        else if(userCMD.equals("Info_Cara"))
+        else if(userCMD.equals("Info"))
         {
             caractereList(listCara);
         }
-        else if(userCMD.equals("Number_Of_Cara"))
+        else if(userCMD.equals("Number"))
         {
             numberOfCara(listCara);
         }
