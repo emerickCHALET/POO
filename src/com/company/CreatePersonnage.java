@@ -38,11 +38,12 @@ public class CreatePersonnage
     }
 
 
-    /*public static Personnage createBasicPersonnage()
+    public static Personnage createBasicPersonnage()
     {
-        Personnage caractere = new BasicArchetype();
-        return  caractere;
-    }*/
+        Personnage man = createPersonnage();
+        BasicArchetype Wiz = new BasicArchetype(man);
+        return Wiz;
+    }
 
     /**
      * create a thief charactere

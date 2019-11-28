@@ -8,7 +8,7 @@ import java.util.*;
 
 public class Dispatch
 {
-    public final static String archeClasse[] = {"Warrior","Wizard","Thief"};
+    public final static String archeClasse[] = {"Warrior","Wizard","Thief", "Basic"};
     /**
      * dispatchCMD call the methods corresponding with the right user command
      * @param userCMD User command
@@ -171,11 +171,16 @@ public class Dispatch
         {
             Personnage cara = CreatePersonnage.createWizard();
             listCara.add(cara);
-            System.out.println("Wizzzzzzzzarrrrrrrd");
         }
         else if (index == 2)
         {
-            System.out.println("TTTTTTTTTHHHHHHHIIIIEEEEEVVVVVV");
+            Personnage cara = CreatePersonnage.createThief();
+            listCara.add(cara);
+        }
+        else if (index == 3)
+        {
+            Personnage cara = CreatePersonnage.createBasicPersonnage();
+            listCara.add(cara);
         }
     }
 }
