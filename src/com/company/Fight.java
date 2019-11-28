@@ -17,6 +17,7 @@ public class Fight
         Personnage p1Attack;
         Personnage p2Deff;
         Personnage p3T;
+        int attack;
         if(listFighter.get(0).getInitiative() < listFighter.get(1).getInitiative())
         {
             p1Attack = listFighter.get(1);
@@ -30,9 +31,9 @@ public class Fight
         do{
             rounds++;
             System.out.println("Rounds " + rounds);
-            p1Attack.getDamage();
-            System.out.println( p1Attack.getName() + " Make " + p1Attack.getDamage() + " Damage !");
-            p2Deff.hurt(p1Attack.getDamage());
+            attack = p1Attack.getDamage();
+            System.out.println( p1Attack.getName() + " Make " + attack + " Damage !");
+            p2Deff.hurt(attack);
             p3T = p1Attack;
             p1Attack = p2Deff;
             p2Deff = p3T;
@@ -40,10 +41,12 @@ public class Fight
         if(p1Attack.getHp() <= 0)
         {
             System.out.println(p1Attack.getName() + " Is death !");
+            System.out.println("Class is = " + p1Attack.getClassA());
         }
         else
         {
             System.out.println(p2Deff.getName() + " Is Death !");
+            System.out.println("Class is = " + p2Deff.getClassA());
         }
     }
 }

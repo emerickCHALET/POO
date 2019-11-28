@@ -4,8 +4,10 @@ import java.util.Scanner;
 
 public class Wizard extends Personnage
 {
-    private int magicalDamage;
-    private int ref;
+    private static int magicalDamage;
+    private static int ref;
+    private static String classA = "Wizard";
+    static boolean first = true;
 
     public Wizard(Personnage pBasic,int magicalDamage)
     {
@@ -20,10 +22,18 @@ public class Wizard extends Personnage
      */
     public int getDamage()
     {
-        int totalMagicalDommage =super.getDamage() + this.magicalDamage;
-        if (this.magicalDamage >= 2)
+        int totalMagicalDommage = super.getDamage() + this.magicalDamage;
+        if (first == false) {
             this.magicalDamage /= 2;
+        }
+        first = false;
+        System.out.println("MagicalDamage = "+ this.magicalDamage);
         return totalMagicalDommage;
+    }
+
+    public String getClassA()
+    {
+        return this.classA;
     }
 
     /**
@@ -32,14 +42,16 @@ public class Wizard extends Personnage
      */
     public  String toString()
     {
+        String classe = "Wizard";
         String res = super.toString();
-        res += "magical damage" + this.magicalDamage +"\n";
+        res += "magical damage = " + this.magicalDamage +"\n" + classA + "\n";
         return res;
     }
 
-    public void startFight()
+    public static void startFight()
     {
-        this.magicalDamage = this.ref;
+        first = true;
+        magicalDamage = ref;
     }
 }
 

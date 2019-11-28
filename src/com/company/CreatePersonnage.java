@@ -20,7 +20,7 @@ public class CreatePersonnage
         Scanner sc = new Scanner(System.in);
         int shield = sc.nextInt();
         Warrior war = new Warrior(dummy, shield);
-        return dummy;
+        return war;
     }
 
     public static Personnage createWizard()
@@ -30,7 +30,7 @@ public class CreatePersonnage
         Scanner sc = new Scanner(System.in);
         int magicalDamage = sc.nextInt();
         Wizard Wiz = new Wizard(camomille, magicalDamage);
-        return camomille;
+        return Wiz;
     }
 
 
