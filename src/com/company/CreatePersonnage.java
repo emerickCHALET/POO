@@ -23,6 +23,10 @@ public class CreatePersonnage
         return war;
     }
 
+    /**
+     * create a wizard charactere
+     * @return a new Personnage Wizard
+     */
     public static Personnage createWizard()
     {
         Personnage camomille = createPersonnage();
@@ -34,12 +38,17 @@ public class CreatePersonnage
     }
 
 
-    /*public static Personnage createBasicPersonnage()
+    public static Personnage createBasicPersonnage()
     {
-        Personnage caractere = new BasicArchetype();
-        return  caractere;
-    }*/
+        Personnage man = createPersonnage();
+        BasicArchetype Wiz = new BasicArchetype(man);
+        return Wiz;
+    }
 
+    /**
+     * create a thief charactere
+     * @return a new Personnage thief
+     */
     public static Personnage createThief()
     {
         Personnage aliBabba = createPersonnage();

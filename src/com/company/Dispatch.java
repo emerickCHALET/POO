@@ -8,7 +8,7 @@ import java.util.*;
 
 public class Dispatch
 {
-    public final static String archeClasse[] = {"Warrior","Wizard","Thief"};
+    public final static String archeClasse[] = {"Warrior","Wizard","Thief", "Basic"};
     /**
      * dispatchCMD call the methods corresponding with the right user command
      * @param userCMD User command
@@ -97,6 +97,12 @@ public class Dispatch
         Personnage seePersonnage = listCara.get(index);
         System.out.println(seePersonnage.toString());
     }
+
+    /**
+     * Choose two fighters for the fight
+     * @param listCara list of Personnages
+     * @param listFighter List of fighter
+     */
     public static void fightingFighter(List<Personnage> listCara,List<Personnage> listFighter)
     {
         Scanner sc = new Scanner(System.in);
@@ -107,6 +113,11 @@ public class Dispatch
         listFighter.add(listCara.get(fighter1));
         listFighter.add(listCara.get(fighter2));
     }
+
+    /**
+     * delete this Personnage
+     * @param listCara List of Personnage
+     */
     public static void deleteThis(List<Personnage> listCara)
     {
         Scanner sc = new Scanner(System.in);
@@ -125,6 +136,11 @@ public class Dispatch
             System.out.println("Ok ! I don't delete him");
         }
     }
+
+    /**
+     * Method for confirm the delete
+     * @return boolean yes or false
+     */
     public static String areYouSure()
     {
         Scanner sc = new Scanner(System.in);
@@ -132,6 +148,11 @@ public class Dispatch
         String yesOrNot = sc.nextLine();
         return  yesOrNot;
     }
+
+    /**
+     * Method for Archetype class
+     * @param listCara List of Personnages
+     */
     public static void archeTopic(List<Personnage> listCara)
     {
         Scanner sc = new Scanner(System.in);
@@ -150,11 +171,16 @@ public class Dispatch
         {
             Personnage cara = CreatePersonnage.createWizard();
             listCara.add(cara);
-            System.out.println("Wizzzzzzzzarrrrrrrd");
         }
         else if (index == 2)
         {
-            System.out.println("TTTTTTTTTHHHHHHHIIIIEEEEEVVVVVV");
+            Personnage cara = CreatePersonnage.createThief();
+            listCara.add(cara);
+        }
+        else if (index == 3)
+        {
+            Personnage cara = CreatePersonnage.createBasicPersonnage();
+            listCara.add(cara);
         }
     }
 }
