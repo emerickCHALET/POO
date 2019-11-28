@@ -15,38 +15,38 @@ public class CreatePersonnage
      */
     public static Personnage createWarrior()
     {
-        Personnage caractere = new Personnage();
+        Personnage dummy = createPersonnage();
         System.out.println("Enter a number of the shield");
         Scanner sc = new Scanner(System.in);
         int shield = sc.nextInt();
-        caractere = new Warrior(shield);
-        return caractere;
+        Warrior war = new Warrior(dummy, shield);
+        return dummy;
     }
 
     public static Personnage createWizard()
     {
-        Personnage caractere = new Personnage();
+        Personnage camomille = createPersonnage();
         System.out.println("Enter a number of magical damage");
         Scanner sc = new Scanner(System.in);
         int magicalDamage = sc.nextInt();
-        caractere = new Wizard(magicalDamage);
-        return caractere;
+        Wizard Wiz = new Wizard(camomille, magicalDamage);
+        return camomille;
     }
 
 
-    public static Personnage createBasicPersonnage()
+    /*public static Personnage createBasicPersonnage()
     {
         Personnage caractere = new BasicArchetype();
         return  caractere;
-    }
+    }*/
 
-    public static Personnage createThief()
+    /*public static Personnage createThief()
     {
         Personnage caractere = new Personnage();
         caractere = new Thief();
 
         return caractere;
-    }
+    }*/
 
     /**
      * Create a charactere with all informations

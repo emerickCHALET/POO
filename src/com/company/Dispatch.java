@@ -22,8 +22,6 @@ public class Dispatch
         else if(userCMD.equals("Create"))
         {
             archeTopic(listCara);
-            Personnage cara = CreatePersonnage.createPersonnage();
-            listCara.add(cara);
         }
         else if(userCMD.equals("Info_Cara"))
         {
@@ -35,6 +33,7 @@ public class Dispatch
         }
         else if(userCMD.equals("Fight"))
         {
+            Personnage.startFight();
             fightingFighter(listCara,listFighter);
             Fight.letsFight(listFighter);
         }
@@ -96,10 +95,7 @@ public class Dispatch
         System.out.println("Choix du personnage : ");
         int index = sc.nextInt();
         Personnage seePersonnage = listCara.get(index);
-        System.out.println("Name : " + seePersonnage.getName());
-        System.out.println("Life : " + seePersonnage.getHp());
-        System.out.println("Damage : " + seePersonnage.getDamage());
-        System.out.println("Initiative : " + seePersonnage.getInitiative());
+        System.out.println(seePersonnage.toString());
     }
     public static void fightingFighter(List<Personnage> listCara,List<Personnage> listFighter)
     {
@@ -150,8 +146,8 @@ public class Dispatch
         }
         else if(index == 1)
         {
-            /*Personnage cara = CreatePersonnage.createWarrior();
-            listCara.add(cara);*/
+            Personnage cara = CreatePersonnage.createWizard();
+            listCara.add(cara);
             System.out.println("Wizzzzzzzzarrrrrrrd");
         }
         else if (index == 2)

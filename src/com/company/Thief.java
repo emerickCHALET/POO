@@ -1,4 +1,4 @@
-package com.company;
+/*package com.company;
 
 public class Thief extends Personnage
 {
@@ -20,3 +20,4 @@ public class Thief extends Personnage
         return this.critiqualDamage;
     }
 }
+*/

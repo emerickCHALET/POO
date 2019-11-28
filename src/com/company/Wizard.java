@@ -7,8 +7,9 @@ public class Wizard extends Personnage
     private int magicalDamage;
     private int ref;
 
-    public Wizard(int magicalDamage)
+    public Wizard(Personnage pBasic,int magicalDamage)
     {
+        super(pBasic.getName(),pBasic.getHp(),pBasic.getDamage(),pBasic.getInitiative());
         this.magicalDamage = magicalDamage;
         this.ref = this.magicalDamage;
     }
