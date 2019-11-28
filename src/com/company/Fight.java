@@ -3,6 +3,14 @@ import java.util.List;
 
 public class Fight
 {
+    /**
+     * Make A fight With the Player One and the Player Two
+     * He take the Player with the most Initiative
+     * He count the Rounds and print the dommage
+     * He alternates the Player for the match rotation
+     * He print who is dead
+     * @param listFighter
+     */
     public static void letsFight(List<Personnage> listFighter)
     {
         int rounds = 0;
