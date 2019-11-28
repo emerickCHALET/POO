@@ -40,7 +40,7 @@ public class Thief extends Personnage
         int res;
 
         res = numberRandom();
-        if (res >= this.dodge)
+        if (res <= this.dodge)
             damage = 0;
         return damage;
     }
@@ -63,10 +63,12 @@ public class Thief extends Personnage
     public int getDamage()
     {
         int res;
-
         res = numberRandom();
-        if (res >= 80)
+        if (res <= criticalDamage)
+        {
+            System.out.println("Debug Critique");
             return (getDamage()* 2);
+        }
         return(getDamage());
     }
 
@@ -96,7 +98,7 @@ public class Thief extends Personnage
     {
         String classe = "Thief";
         String res = super.toString();
-        res += "Dodge = " + this.dodge +"\n" + "Critical Damage =" +this.criticalDamage +"\n" + classA+ "\n";
+        res += "Dodge = " + this.dodge +"\n" + "Critical Damage = " +this.criticalDamage +"\n" + classA+ "\n";
         return res;
     }
 }
