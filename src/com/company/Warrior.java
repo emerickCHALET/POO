@@ -7,6 +7,11 @@ public class Warrior extends Personnage
     private int shield;
     private static String classA = "Warrior";
 
+    /**
+     * Constructor of Warrior
+     * @param pBasic all information of personnages
+     * @param shield percent of damage receive
+     */
     public Warrior(Personnage pBasic , int shield )
     {
         super(pBasic.getName(),pBasic.getHp(),pBasic.getDamage(),pBasic.getInitiative());

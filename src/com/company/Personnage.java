@@ -15,6 +15,13 @@ public class Personnage
     /** Creation of the points of initiative*/
     private int initiative;
 
+    /**
+     * constructor of personnage class
+     * @param nameUser name of personnage
+     * @param hp of personnage
+     * @param damage of persoonage
+     * @param initiative of personnage
+     */
     public Personnage(String nameUser, int hp, int damage, int initiative)
     {
         this.name = nameUser;
@@ -48,6 +55,10 @@ public class Personnage
         return this.hp -= damage;
     }
 
+    /**
+     * return class of personnage
+     * @return null
+     */
     public String getClassA()
     {
         return null;
@@ -74,6 +85,9 @@ public class Personnage
         System.out.println(this.initiative);
     }
 
+    /**
+     * Method for start the fight
+     */
     public static void startFight()
     {
 

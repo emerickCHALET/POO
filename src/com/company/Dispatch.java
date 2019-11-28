@@ -97,6 +97,12 @@ public class Dispatch
         Personnage seePersonnage = listCara.get(index);
         System.out.println(seePersonnage.toString());
     }
+
+    /**
+     * Choose two fighters for the fight
+     * @param listCara list of Personnages
+     * @param listFighter List of fighter
+     */
     public static void fightingFighter(List<Personnage> listCara,List<Personnage> listFighter)
     {
         Scanner sc = new Scanner(System.in);
@@ -107,6 +113,11 @@ public class Dispatch
         listFighter.add(listCara.get(fighter1));
         listFighter.add(listCara.get(fighter2));
     }
+
+    /**
+     * delete this Personnage
+     * @param listCara List of Personnage
+     */
     public static void deleteThis(List<Personnage> listCara)
     {
         Scanner sc = new Scanner(System.in);
@@ -125,6 +136,11 @@ public class Dispatch
             System.out.println("Ok ! I don't delete him");
         }
     }
+
+    /**
+     * Method for confirm the delete
+     * @return boolean yes or false
+     */
     public static String areYouSure()
     {
         Scanner sc = new Scanner(System.in);
@@ -132,6 +148,11 @@ public class Dispatch
         String yesOrNot = sc.nextLine();
         return  yesOrNot;
     }
+
+    /**
+     * Method for Archetype class
+     * @param listCara List of Personnages
+     */
     public static void archeTopic(List<Personnage> listCara)
     {
         Scanner sc = new Scanner(System.in);
