@@ -123,8 +123,7 @@ public class Dispatch
     {
         Scanner sc = new Scanner(System.in);
         System.out.println("     Need to delete? but who?");
-        System.out.println("    Choose the number of Index");
-        System.out.println("-0 warrior-1 wizard-2 thief-3 basic-");
+        System.out.println("    Choose the Index");
         int index =  sc.nextInt();
         String sur = areYouSure();
         if(sur.equals("Yes"))
