@@ -38,16 +38,13 @@ public class Thief extends Personnage
      */
     public int hurt(int damage)
     {
-        System.out.println("se prends damage avant lancé de dé"+ damage);
         int res;
         res = numberRandom();
         if (res <= this.dodge)
         {
-
+            System.out.println("Dodge");
             damage = 0;
-            System.out.println(damage + " reset ?");
         }
-        System.out.println("n'est pas passé ou pas et renvoie" + damage);
         return super.hurt(damage);
     }
 
@@ -72,7 +69,7 @@ public class Thief extends Personnage
         res = numberRandom();
         if (res <= criticalDamage)
         {
-            System.out.println("Debug Critique");
+            System.out.println("Critique !!!!");
             return (DGTS * 2);
         }
         return DGTS;
