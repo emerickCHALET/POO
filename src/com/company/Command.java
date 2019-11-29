@@ -17,7 +17,7 @@ public class Command
      * @return return the line command
      */
     public final static String tabCommand[] = {"Help","Exit","Create","Delete","Info",
-            "Number","Fight", "CreateWarrior"};
+            "Number","Fight", "CreateWarrior", "CreateWizard", "CreateThief", "CreateBasicArchetype" };
     public static  String getUserChoice()
     {
         if(firstCommand == true)
