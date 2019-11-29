@@ -48,7 +48,7 @@ public class Thief extends Personnage
             System.out.println(damage + " reset ?");
         }
         System.out.println("n'est pas passé ou pas et renvoie" + damage);
-        return damage;
+        return super.hurt(damage);
     }
 
     /**
