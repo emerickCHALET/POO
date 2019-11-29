@@ -46,15 +46,16 @@ public class Dispatch
             Personnage cara = CreatePersonnage.createWizard();
             listCara.add(cara);
         }
+        else if (userCMD.equals("CreateThief"))
+        {
+            Personnage cara = CreatePersonnage.createThief();
+            listCara.add(cara);
+        }
         else if(userCMD.equals("Delete"))
         {
             deleteThis(listCara);
         }
-        else if (userCMD.equals("CreateWarrior"))
-        {
-            Personnage cara = CreatePersonnage.createWarrior();
-            listCara.add(cara);
-        }
+
     }
     /**
      * helpMethod is method for print the available line command
@@ -121,7 +122,9 @@ public class Dispatch
     public static void deleteThis(List<Personnage> listCara)
     {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Need to delete ? but who ?");
+        System.out.println("     Need to delete? but who?");
+        System.out.println("    Choose the number of Index");
+        System.out.println("-0 warrior-1 wizard-2 thief-3 basic-");
         int index =  sc.nextInt();
         String sur = areYouSure();
         if(sur.equals("Yes"))
@@ -144,7 +147,7 @@ public class Dispatch
     public static String areYouSure()
     {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Are you sur About that'? ");
+        System.out.println("Are you sur About that'? Yes or No");
         String yesOrNot = sc.nextLine();
         return  yesOrNot;
     }
@@ -160,7 +163,8 @@ public class Dispatch
         {
             System.out.println(i + " " + archeClasse[i]);
         }
-        System.out.println("Make your class");
+        System.out.println("        Make your class");
+        System.out.println("Choose the Index of your choice");
         int index = sc.nextInt();
         if(index == 0)
         {
